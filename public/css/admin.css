@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body{
+  background: #fff;
+}
+.admin_table{
+  width: 90%;
+  background: white;
+}
+.admin_table th , .admin_table td{
+  border: 1px solid #999999;
+  padding: 10px;
+  text-align: center;
+}
+.admin_table th{
+  color: white;
+  background:linear-gradient(to top, #c3bce6, #d4abce);
+}
+.admin_table td{
+  /* max-width: 10vh; */
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.admin_table tr:nth-child(2n+1){
+  background-color: #f8f7ff;
+}
+.admin_mail{
+  text-align: left;
+}
+.overxauto{
+  overflow-x: auto;
+}
+.admin_adduser{
+  width: 90%;
+}
+.admin_btn{
+  width: 100%;
+  background:#c3bce6;
+  transition: 0.5s;
+}
+.admin_btn:hover{
+  opacity: 0.7;
+}
+.popup{
+  height: 100vh;
+  position: fixed;
+  top:0;
+  width: 100%;
+  display: none;
+}
+.popup_bg{
+  background: rgba(0,0,0,0.5);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.popup_content{
+  background: #fff;
+  padding: 40px;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+}
+.popup h1{
+  font-family: 'Kiwi Maru', serif;
+  font-size: 1.6em;
+  color: #cd5c99;
+  margin-left:0;
+}
+.popup p{
+  margin-top: 15px;
+}
+.popup button{
+  font-weight: bold;
+  padding: 5px 20px;
+  margin-top:20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.popup button:hover{
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px){
+  .admin_adduser form{
+    text-align: center;
+  }
+  .sp-admin_table{
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+}

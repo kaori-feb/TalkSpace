@@ -1,0 +1,683 @@
+@charset "UTF-8";
+
+/* ヘッダー */
+.staff_header{
+  margin-bottom: 20px;
+  position: relative;
+}
+.staff_header .menu{
+  padding-right: 18vh;
+}
+.talkon_btn_container{
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+}
+.to_talkspace{
+  position: fixed;
+  bottom: 2vh;
+  right: 2vh;
+  z-index: 2;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+}
+.home_header_btn{
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px navy;
+  width: 17vh;
+  height: 17vh;
+  border-radius: 50%;
+  margin: 0;
+}
+.home_header_btn::before, .home_header_btn::after{
+  border-radius: 50%;
+}
+.is_finished::before{
+  background: linear-gradient(pink, #cd5c99);
+  border: 2px solid #e07bb2;
+}
+.is_finished::after{
+  background: linear-gradient(#cd5c99, #e07bb2);
+  border: 2px solid #e07bb2;
+}
+.to_talkspace::before{
+  background: linear-gradient(#fcbc7c, orange);
+  border: 2px solid #fcbc7c;
+}
+.to_talkspace::after{
+  background: linear-gradient(orange, #fcbc7c);
+  border: 2px solid #fcbc7c;
+}
+header{
+  float: left;
+}
+header .logo img{
+  width:40vw;
+  margin-left: 20px;
+}
+.menu{
+  float: right;
+  background: #082b99;
+  border-radius: 20px;
+  padding: 0 40px;
+  margin: 28px 20px 20px 0 ;
+  box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.5);
+}
+.menu li{
+  float: left;
+  margin: 20px;
+}
+.menu li a{
+  color: #ffffe8;
+  position: relative;
+  display: inline-block;
+  transition: all 1s;
+}
+.menu li a::after{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  border-bottom: solid 1px #fccf92;
+  transition: 0.5s;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.menu li a:hover::after{
+  width: 100%;
+}
+
+/* フッター */
+.footer{
+  height: 50px;
+}
+
+
+/* プロフィールページ */
+.profile{
+  width: 100%;
+  margin: 30px 0;
+}
+.mt10{
+  margin-top: 10px;
+}
+.prof_favorite_btn{
+  position: relative;
+  z-index: 0;
+}
+.prof_favorite_btn::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top:0;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: linear-gradient(#e07bb2, #cd5c99);
+  border: 2px solid #e07bb2;
+}
+.prof_favorite_btn::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  top:0;
+  border-radius: 10px;
+  background: linear-gradient(#cd5c99, #e07bb2);
+  border: 2px solid #e07bb2;
+}
+.prof_favorite_btn:hover::before{
+  opacity: 0;
+}
+.rotate{
+  transform: rotate(-10deg);
+}
+.profile_data{
+  width: 60%;
+  margin: 30px auto 20px auto;
+  border: 1px solid #d6e8ff;
+}
+.profile_data th, .profile_data td{
+  padding: 20px 10px;
+  text-align: center;
+}
+.profile_data th{
+  background: linear-gradient(to top, #d6e8ff, #e6f1ff);
+}
+.profile_data td{
+  border-bottom: 1px solid #d6e8ff;
+}
+.profile_data td:first-of-type{
+  text-align: left;
+}
+.userprof_comment{
+  width: 90%;
+}
+.userprofile_btn{
+  width: 200px;
+  margin: 20px 10px;
+}
+/* プロフィール画像 */
+.profile_img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #082b99;
+}
+.userprof_fav:hover{
+  background: #e8e8e8;
+  border: 2px solid #e8e8e8;
+}
+
+/* ホーム(管理者以外) */
+.home_header{
+  width: 95vw;
+}
+.home_header p{
+  font-size: 1.6em;
+  font-family: 'Kiwi Maru', serif;
+  color:white;
+  margin:0 10px 0px 10px;
+}
+.home_header .flex{
+  align-items: center;
+}
+
+.home_content{
+  width: 100%;
+}
+
+.menu_wrap{
+  width: 95vw;
+  margin-top: 20px;
+  border-bottom: 3px solid #cd5c99;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+.menu_label{
+  color: white;
+  background: lightgray;
+  margin-right: 5px;
+  padding: 10px .5em;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  flex: 1;
+}
+.menu_label:last-of-type{
+  margin-right: 0px;
+}
+.menu_current{
+  background: #cd5c99;
+}
+.tab_content {
+  width: 95vw;
+  border-radius: 0 0 10px 10px;
+}
+.notfind{
+  height: 30vh;
+}
+.notfind_message{
+  font-size: 1.8em;
+  font-family: 'Kiwi Maru', serif;
+  color:#082b99;
+  margin-bottom: 20px;
+}
+
+
+/* 予約状況 */
+.home_appointment{
+  width: 70%;
+  position: relative;
+}
+.home_appointment p {
+  font-size: 1.6em;
+  line-height: 1.8em;
+}
+.home_appointment button{
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.home_appointment_title{
+  width: 80%;
+  margin: 10vh auto 0 auto;
+  padding: 5vh 0;
+  background-size: contain;
+}
+.past_talk{
+  margin: 30px 0;
+}
+.past_talk table{
+  width: 80%;
+  box-shadow:  1px 1px 3px #cccccc;
+}
+.past_talk th, .past_talk td{
+  padding: 10px 15px;
+  text-align: center;
+}
+.past_talk th{
+  background: #eb996a;
+  color: #ffffe8;
+}
+.past_talk td{
+  background: #fffcfa;
+}
+.past_talk tr, .staff_box tr{
+  border-bottom: 1px dashed #999999;
+}
+.past_talk img{
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* 過去の相談 */
+.past_all table{
+  width: 95%;
+}
+
+/* スタッフ検索タブ */
+.explain{
+  margin: 20px 0　20px 20px;;
+}
+.text_limit{
+  visibility: hidden;
+}
+.staff_box{
+  width: calc(100% / 3 - 20px);
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #6d6789;
+  background: #fffcfa;
+  box-shadow:  1px 1px 5px #cccccc;
+  position: relative;
+}
+.staff_box table{
+  width: 90%;
+}
+.staff_box img{
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.staff_box table th, .staff_box table td{
+  font-size: 0.8em;
+  padding: 2px 0;
+}
+.staff_box table th{
+  width: 40%;
+}
+.favorite_staff_btn{
+  width: 100%;
+  margin: 10px 0;
+}
+.paging{
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+.paging a{
+  margin: 0 5px;
+}
+.paging a:hover{
+  color: darkgray;
+}
+
+/* お気に入りタブ */
+.fav_wrap{
+  flex-wrap: wrap;
+}
+.staff_box img.fav_img{
+  width: 30%;
+}
+.fav_table{
+  width: 70%;
+}
+.delete_btn{
+  width: 15%;
+  margin: 0;
+  padding: 3px 5px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #c4c4c4;
+  transition: 0.5s;
+}
+.delete_btn:hover{
+  background: lightgray;
+}
+
+/* プロフィールタブ */
+.prof_wrap{
+  width: 100%;
+  position: relative;
+}
+.up_prof_form{
+  text-align: right;
+}
+.up_prof_form button{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.dl_home_profimg{
+  width: 70%;
+  margin-top: 30px;
+  border: 1px solid #d6e8ff;
+}
+.dl_home_profimg dt{
+  padding: 10px 10px;
+  background: linear-gradient(to top, #d6e8ff, #e6f1ff);
+}
+.dl_home_profimg dd{
+  margin: 10px 0;
+  padding: 0 10px;
+}
+.home_profimg{
+  width: 20vw;
+  height: 20vw;
+}
+.profimg{
+  width:40%;
+}
+.myprofile{
+  width: 50%;
+  border: 1px solid #d6e8ff;
+}
+.myprof_comment{
+  height: 10vh;
+  resize: vertical;
+  padding: 2vh 2vh;
+}
+
+
+/* スタッフ検索 */
+.staffsearch_container{
+  margin: 7vh 0 5vh 0;
+}
+.search_box{
+  width: 25%;
+  margin: 10px;
+}
+.staffsearch_form{
+  border: 1px solid lightgray;
+}
+.staffsearch_form p{
+  text-align: center;
+  padding: 1vh 0;
+  background: linear-gradient(to top, #f0edff, #f8f7ff);
+}
+.staffsearch_form p.staffsearch_formtop{
+  color: white;
+  margin-bottom: 2px;
+  background: linear-gradient(to top, #c3bce6, #d4abce);
+}
+.search_condition{
+  width: 100%;
+  text-align: center;
+  padding: 2vh 0;
+  background: white;
+}
+.search_condition button{
+  margin: 0;
+}
+.search_condition .w90{
+  width: 90%;
+}
+.search_result{
+  width: 80%;
+  flex-wrap: wrap;
+}
+.favorite_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7vh;
+  height: 7vh;
+  color: white;
+  font-size: 1.2em;
+  border: 2px solid #f7c8e2;
+  border-radius: 50%;
+  background: linear-gradient(#cd5c99,#f7c8e2);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.favorite_btn:hover{
+  opacity: 0.7;
+}
+.gray_btn{
+  border: 2px solid lightgray;
+  background: lightgray;
+}
+
+/* 相談スペース */
+.talkspace_title{
+  width: 35%;
+  margin: 0 auto 20px auto;
+}
+.talkspace{
+  width: 70%;
+}
+.inputmessage{
+  width: 70%;
+  margin: 0 auto;
+}
+.inputmessage textarea{
+  width: 90%;
+  padding: 10px 0 10px 10px;
+  font-size: 1.2em;
+  resize: vertical;
+  transition-duration: 500ms;
+}
+.sendmessage_btn{
+  width: 9%;
+  font-size: 1em;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+}
+.sendmessage_btn:active{
+  box-shadow:none;
+}
+.bord{
+  height: 70vh;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid #a37850;
+  background: white;
+  box-shadow: lightgray 2px 2px 5px;
+  resize:vertical;
+  overflow: auto;
+}
+.user{
+  width: 15%;
+  text-align: center;
+}
+.talkspace_img{
+  width: 70%;
+  margin: 0 auto;
+}
+.nickname{
+  color: gray;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+.ballon{
+  position: relative;
+  display: inline-block;
+  margin: 0 15px 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  background: #e0edff;
+  border-radius: 10px;
+}
+.ballon_right{
+  text-align: left;
+}
+.ballon_right::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -10px;
+  border: 10px solid transparent;
+  border-left: 10px solid #e0edff;
+}
+.ballon_left::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  margin-top: -10px;
+  border: 10px solid transparent;
+  border-right: 10px solid #e0edff;
+}
+.ballon p{
+  margin: 0;
+  padding: 0;
+}
+.staff, .staff p{
+  text-align: right;
+}
+
+@media screen and (max-width: 768px){
+  header .logo img{
+    width: 70vw;
+  }
+  .home_header_btn{
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+  }
+  .home_header_btn::before, .home_header_btn::after{
+    border-radius: 10px;
+  }
+  .staff_header .menu{
+    padding-right: 0px;
+  }
+  .menu{
+    width: 100%;
+    font-size: 12px;
+    padding: 0;
+    margin: 10px 0;
+  }
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu li{
+    float: none;
+    margin: 20px 0;
+  }
+  .menu li a{
+    position: static;
+  }
+  .menu li a::after{
+    display: none;
+  }
+  menu a{
+    font-size: 12px;
+  }
+
+  /* スタッフ検索 */
+  .staffsearch_container{
+    display: block;
+  }
+  .search_box{
+    width: 100%;
+    margin: 0;
+  }
+  .search_result{
+    width: 100%;
+  }
+  .staff_box{
+    width: 100%;
+  }
+  .staff_box img{
+    width: 30%;
+  }
+
+  /* 過去の相談 */
+  .past_all{
+    overflow: auto;
+    white-space: nowrap;
+  }
+  .talkspace_title{
+    width: 100%;
+  }
+
+  /* プロフィールタブ */
+  .up_prof_form{
+    text-align: center;
+  }
+  .up_prof_form button{
+    position: static;
+    margin: 0;
+  }
+  .profile{
+    display: block;
+  }
+  .profimg{
+    width: 100%;
+  }
+  .dl_home_profimg{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .myprofile{
+    width: 100%;
+  }
+  .profile_data th, .profile_data td {
+    display: block;
+    width: 100%;
+  }
+  .profile_data td:first-of-type{
+    text-align: center;
+  }
+  .profile_data td.myprof_comment{
+    height: auto;
+    text-align: left;
+  }
+  .sp-tableinline{
+    display: flex;
+  }
+  .sp-tableinline td{
+    display: table-cell;
+  }
+  .sp-tableinline td:nth-of-type(1){
+    width: 20%;
+  }
+
+  /* 相談スペース */
+  .user{
+    font-size: 10px;
+  }
+  .inputmessage{
+    width: 100%;
+    text-align: center;
+  }
+  .inputmessage textarea{
+    width: 80%;
+  }
+  .inputmessage button{
+    width: auto;
+  }
+
+}

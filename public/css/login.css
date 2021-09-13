@@ -1,0 +1,170 @@
+@charset "UTF-8";
+.login_form p.error{
+  color: red;
+  font-size: 0.8em;
+  margin: 0;
+}
+.login_logo{
+  height: 25vh;
+  width: 50vw;
+  margin: 0 auto;
+  background: url(../img/Logowords.png)no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.loginform_container{
+  height: 75vh;
+}
+.login_form{
+  width: 90%;
+  height: 98%;
+  border-radius: 20px;
+  background: #ffffe8;
+  margin: 0 auto;
+  padding-top: 10px;
+  box-shadow:3px 3px 5px rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-around;
+}
+.login_form form, .anonymous_container{
+  width: 30vw;
+}
+.login_form p{
+  font-size:0.8em;
+  margin: 20px 0;
+}
+.login_input{
+  box-shadow:2px 2px 3px rgba(255, 255, 255, 0.5);
+}
+.login_form .login_error{
+  color: red;
+  margin: 0;
+}
+
+.adduser_btn{
+  background: #082b99;
+  transition: 0.5s;
+}
+.adduser_btn:hover{
+	opacity: 0.7;
+}
+.title{
+  margin: 20px auto;
+}
+.scroll{
+  color: navy;
+}
+.scrollpoint{
+  animation: scrollpoint 3s infinite ease;
+}
+@keyframes scrollpoint {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(0, 10px);
+  }
+  25% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(0, 15px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.iforgot{
+  width: 30vw;
+  text-align: center;
+  margin-bottom:30px;
+}
+.iforgot a{
+  color: #575757;
+  font-size: 0.8em;
+}
+.iforgot a:hover{
+  text-decoration: underline;
+}
+.commit_board{
+  margin: 0 auto;
+}
+.box{
+  width: 48%;
+}
+.commit_main_message{
+  font-size: 1.6em;
+  font-family: 'Kiwi Maru', serif;
+  color: #cd5c99;
+  margin:30px 0 30px 0;
+}
+.commit_line{
+  height: calc(100vh - 20px);
+}
+.commit_main{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.header_logo{
+  width: 40vw;
+  margin-left: 5vw;
+}
+.header_logo img{
+  width: 100%;
+  display: inline;
+}
+
+@media screen and (max-width: 768px){
+  .login_logo{
+    height: 15vh;
+  }
+  .login_form{
+    display: block;
+    width: 95vw;
+    margin-bottom: 20px;
+  }
+  .login_form form{
+    width: 100%;
+  }
+  .anonymous_container{
+    margin: 0 auto;
+  }
+  .loginform_container{
+    height: 100%;
+  }
+  .user{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .commit_board{
+    height: 100%;
+  }
+  .commit_main{
+    display: block;
+  }
+  .commit_line{
+    height: calc(100% - 20px);
+  }
+  .box{
+    width: 100%;
+  }
+  .header_logo{
+    width: 90vw;
+  }
+
+}
+@media screen and (max-width: 599px){
+  .sp-anonymous{
+    display: block;
+  }
+}

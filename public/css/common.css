@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/*---common style---*/
+
+body{
+	background:url(/img/bg.png)repeat;
+}
+.none{
+	display: none;
+}
+.on{
+	display: block;
+}
+.ma0{
+	margin: 0 auto;
+}
+.center{
+	text-align: center;
+}
+.flex{
+  display: flex;
+}
+.flex_around{
+	justify-content: space-around;
+}
+.flex_between{
+	justify-content: space-between;
+}
+.flex_center{
+	justify-content: center;
+}
+.aligin_center{
+	align-items: center;
+}
+.title{
+  padding: 20px;
+  font-family: 'Kiwi Maru', serif;
+  text-align: center;
+  background: url(/img/title_bg.jpg)repeat;
+  background-size: cover;
+}
+.line{
+  padding: 20px;
+  border: 2px dashed #b88d5a;
+  border-radius: 10px;
+}
+.disabled_btn{
+  cursor: default;
+  width: 100%;
+  margin: 10px 0;
+}
+input[type="text"], input[type="password"]{
+  padding: 2vh 2vh;
+  width: 100%;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+  outline: none;
+  box-shadow: 0px 0px 5px 5px rgba(252, 212, 151, 0.8);
+}
+button {
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  padding:10px 15px;
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+.common_btn{
+  position: relative;
+  z-index: 0;
+}
+.common_btn::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top:0;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: linear-gradient(#7bd3e0, #51b5b2);
+  border: 2px solid #7bd3e0;
+}
+.common_btn::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  top:0;
+  border-radius: 10px;
+  background: linear-gradient(#51b5b2, #7bd3e0);
+  border: 2px solid #7bd3e0;
+}
+.common_btn:hover::before, .login_anonymous:hover::before{
+  opacity: 0;
+}
+.wrap_bg{
+  width: 95vw;
+  padding: 10px;
+  background: #ffffe8;
+  border-radius: 10px;
+}
+.wrap_bg h1{
+  font-size: 1.4em;
+  font-family: 'Kiwi Maru', serif;
+  color:#082b99;
+  margin-bottom: 20px;
+}
+.wrap_bg h2{
+  font-size: 1.2em;
+  color:red;
+  margin-top: 20px;
+}
+.wrap_bg li{
+  font-size: 0.9em;
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+.btn_container{
+  margin: 50px 0 30px 0;
+}
+.navy_btn{
+  background: #082b99;
+  transition: 0.5s;
+}
+.navy_btn:hover{
+  opacity: 0.7;
+}
+.unavailable_btn{
+	background: lightgray;
+}
+.unavailable_btn:hover{
+	opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+.line{
+	padding: 10px;
+}
+}
